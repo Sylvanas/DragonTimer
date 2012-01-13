@@ -25,8 +25,8 @@ namespace DragonTimer
         /// <summary>
         /// Key combinations
         /// </summary>
-        static readonly int[] KeyComb = new[] { 164, 192 };
-        static readonly int[] VoiceKeyComb = new[] { 164, 'Z' };
+        static readonly int[] KeyComb = new[] { 162, 192 };
+        static readonly int[] VoiceKeyComb = new[] { 162, 'Z' };
         #endregion        
 
         #region Jungle static variables
