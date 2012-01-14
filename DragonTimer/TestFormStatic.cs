@@ -19,14 +19,15 @@ namespace DragonTimer
             InitializeComponent();
 
             _speech = new SpeechSynthesizer {Volume = 100, Rate = -2};
+            
         }        
 
         #region key combinations
         /// <summary>
         /// Key combinations
         /// </summary>
-        static readonly int[] KeyComb = new[] { 162, 192 };
-        static readonly int[] VoiceKeyComb = new[] { 162, 'Z' };
+        static readonly Keys[] KeyComb = new[] { Keys.LControlKey, Keys.Oemtilde };
+        static readonly Keys[] VoiceKeyComb = new[] { Keys.LControlKey, Keys.Z };
         #endregion        
 
         #region Jungle static variables
@@ -50,7 +51,7 @@ namespace DragonTimer
         /// <summary>
         /// other static variables
         /// </summary>
-        static int[] _keysPressed = new[] { 0, 0 };
+        static Keys[] _keysPressed = new[] { Keys.Space, Keys.Space };
         static int _count;
         static DateTime? _dragonKilledTime;
         //static SoundPlayer _simpleSound = new SoundPlayer("sound.WAV");
@@ -70,7 +71,7 @@ namespace DragonTimer
                 _keysPressed[i - 1] = _keysPressed[i];
             }
 
-            _keysPressed[_keysPressed.Length - 1] = (int)e.KeyCode;
+            _keysPressed[_keysPressed.Length - 1] = e.KeyCode;
 
             bool checkDragonKill = true;
             bool checkDragonCheck = true;
@@ -92,7 +93,7 @@ namespace DragonTimer
             // check if Dragon Kill Comb was pressed
             if (checkDragonKill)
             {
-                _keysPressed = new[] { 0, 0 };
+                _keysPressed = new[] { Keys.Space, Keys.Space };
                 if (_interval == 0)
                     Timer.Interval = 1;
                 else
