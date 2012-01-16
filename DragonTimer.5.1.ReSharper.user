@@ -11,9 +11,15 @@
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MouseEventExtArgs.cs" caret="1120" fromTop="21" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Callbacks.cs" caret="11815" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Windows.cs" caret="5819" fromTop="0" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:TestFormStatic.cs" caret="953" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:Program.cs" caret="434" fromTop="16" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="5082" fromTop="36" />
     </RecentFiles>
-    <RecentEdits />
+    <RecentEdits>
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="187" fromTop="10" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="3408" fromTop="17" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="3794" fromTop="25" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="4286" fromTop="34" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />

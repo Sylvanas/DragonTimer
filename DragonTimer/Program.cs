@@ -11,7 +11,7 @@ namespace DragonTimer
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestFormStatic());
+            Application.Run(new MainWindow());
         }
     }
 }
