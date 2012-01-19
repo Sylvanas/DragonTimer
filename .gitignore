@@ -3,3 +3,5 @@
 /DragonTimer/obj
 /_ReSharper.DragonTimer
 *.suo
+/installerWin86/output
+/installerWin64/output
