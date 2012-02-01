@@ -12,41 +12,41 @@
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Callbacks.cs" caret="11815" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Windows.cs" caret="5819" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:Program.cs" caret="0" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="80" fromTop="2" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="915" fromTop="25" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4283" fromTop="51" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="372" fromTop="16" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="674" fromTop="20" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="153" fromTop="6" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="1265" fromTop="30" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1131" fromTop="26" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1603" fromTop="33" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="526" fromTop="11" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="279" fromTop="5" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="28" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="928" fromTop="15" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="14" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="21" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="30" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="3" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="28" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="930" fromTop="15" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="14" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="21" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="30" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="3" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="524" fromTop="12" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="12" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4706" fromTop="22" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4630" fromTop="28" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="12" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="22" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5240" fromTop="28" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="1230" fromTop="31" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="1195" fromTop="30" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="3316" fromTop="12" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4107" fromTop="25" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="3629" fromTop="14" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="1045" fromTop="9" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="928" fromTop="22" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="545" fromTop="21" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="160" fromTop="11" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="42" fromTop="1" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="372" fromTop="16" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="3845" fromTop="12" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4158" fromTop="14" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="1047" fromTop="9" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="930" fromTop="22" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="162" fromTop="11" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="374" fromTop="16" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="2433" fromTop="13" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4752" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="177" fromTop="9" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1467" fromTop="16" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1074" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="2143" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="80" fromTop="2" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="46" fromTop="2" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="674" fromTop="20" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -70,7 +70,7 @@
       <Item value="protected" priority="5" />
       <Item value="virtual" priority="0" />
       <Item value="override" priority="1" />
-      <Item value="return" priority="5" />
+      <Item value="return" priority="6" />
       <Item value="false" priority="1" />
       <Item value="private" priority="6" />
       <Item value="readonly" priority="0" />
@@ -85,7 +85,7 @@
       <Item value="CheckShortcut`0" priority="0" />
       <Item value="eleapsedSeconds" priority="6" />
       <Item value="null" priority="0" />
-      <Item value="if" priority="7" />
+      <Item value="if" priority="8" />
       <Item value="else" priority="2" />
       <Item value="DragonRespawnSeconds" priority="2" />
       <Item value="OtherIntervalsSeconds" priority="2" />
@@ -106,6 +106,7 @@
       <Item value="result" priority="3" />
       <Item value="GetMinutesAndSeconds`0" priority="0" />
       <Item value="minutesSeconds" priority="1" />
+      <Item value="UseOtherIntervals" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Timers.Timer">
       <Item value="Interval" priority="1" />

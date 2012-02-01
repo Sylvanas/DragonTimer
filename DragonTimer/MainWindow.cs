@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+
 namespace DragonTimer
 {
 
@@ -20,7 +21,7 @@ namespace DragonTimer
         private void Form1Load(object sender, EventArgs e)
         {
             HookManager.KeyDown += HookManagerKeyDown;
-            _dragonEvent = new EventTrigger(new[] { Keys.LControlKey, Keys.Oemtilde }, new[] { Keys.LControlKey, Keys.Z }, 130, 120, 30, true);
+            _dragonEvent = new EventTrigger(new[] { Keys.LControlKey, Keys.Oemtilde }, new[] { Keys.LControlKey, Keys.Z }, 360, 120, 30, true);
         }
 
         private void HookManagerKeyDown(object sender, KeyEventArgs e)

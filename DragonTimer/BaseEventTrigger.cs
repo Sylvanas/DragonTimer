@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Speech.Synthesis;
-using System.Text;
 using System.Timers;
 using System.Windows.Forms;
 
 namespace DragonTimer
 {
+    ///<summary>
+    ///</summary>
     public class BaseEventTrigger
     {
         protected Keys[] KeyCombinationStart;
@@ -30,6 +31,14 @@ namespace DragonTimer
             FirstInterval = (RespawnSeconds - FirstIntervalSeconds);
         }
 
+        ///<summary>
+        ///</summary>
+        ///<param name="keyCombinationStart"></param>
+        ///<param name="keyCombinationAction"></param>
+        ///<param name="respawnSecondsValue"></param>
+        ///<param name="firstIntervalSecondsValue"></param>
+        ///<param name="otherIntervalsSecondsValue"></param>
+        ///<param name="useOtherIntervalsValue"></param>
         public BaseEventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue)
         {
             KeyCombinationStart = keyCombinationStart;
@@ -42,11 +51,15 @@ namespace DragonTimer
             Timer.Elapsed += OnTimedEvent;
         }
 
+        ///<summary>
+        ///</summary>
+        ///<param name="keyCombination"></param>
         public void CheckShortcuts(Keys[] keyCombination)
         {
             if (CheckShortcut(keyCombination, KeyCombinationStart))
             {
                 ResetEventTrigger();
+                return;
             }
             if (CheckShortcut(keyCombination, KeyCombinationAction))
             {
@@ -110,7 +123,10 @@ namespace DragonTimer
                 {
                     timerIntervalToAdd = RespawnSeconds - _elapsedSeconds;
                 }
-                OnEventTime(RespawnSeconds - _elapsedSeconds);
+                if(UseOtherIntervals)
+                {
+                    OnEventTime(RespawnSeconds - _elapsedSeconds);
+                }
                 Timer.Interval = timerIntervalToAdd * 1000;
                 Timer.Start();
             }
