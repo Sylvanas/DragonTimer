@@ -11,14 +11,42 @@
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MouseEventExtArgs.cs" caret="1120" fromTop="21" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Callbacks.cs" caret="11815" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Windows.cs" caret="5819" fromTop="0" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="5082" fromTop="36" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:Program.cs" caret="0" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="3853" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="428" fromTop="16" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="475" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="187" fromTop="10" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="3408" fromTop="17" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="3794" fromTop="25" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="4286" fromTop="34" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="970" fromTop="10" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="4912" fromTop="24" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="4658" fromTop="21" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1603" fromTop="31" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="585" fromTop="10" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="38" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="26" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1681" fromTop="10" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="30" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="438" fromTop="23" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="15" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="27" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1044" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="18" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="799" fromTop="24" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="35" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="613" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="719" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="17" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="6" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="8" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="22" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="18" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="22" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="29" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4350" fromTop="17" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4082" fromTop="28" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4182" fromTop="30" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="3096" fromTop="15" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="475" fromTop="13" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -32,4 +60,43 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="BaseEventTrigger`0" priority="0" />
+      <Item value="base" priority="1" />
+      <Item value="seconds" priority="0" />
+      <Item value="keyCombination" priority="0" />
+      <Item value="public" priority="4" />
+      <Item value="protected" priority="4" />
+      <Item value="virtual" priority="0" />
+      <Item value="override" priority="1" />
+      <Item value="return" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="private" priority="4" />
+      <Item value="readonly" priority="0" />
+      <Item value="int" priority="3" />
+      <Item value="bool" priority="2" />
+      <Item value="firstIntervalSecondsValue" priority="0" />
+      <Item value="otherIntervalsSeconds" priority="0" />
+      <Item value="otherIntervalsSecondsValue" priority="0" />
+      <Item value="useOtherIntervals" priority="0" />
+      <Item value="useOtherIntervalsValue" priority="0" />
+      <Item value="void" priority="2" />
+      <Item value="CheckShortcut`0" priority="0" />
+      <Item value="eleapsedSeconds" priority="6" />
+      <Item value="null" priority="0" />
+      <Item value="if" priority="4" />
+      <Item value="else" priority="1" />
+      <Item value="DragonRespawnSeconds" priority="2" />
+      <Item value="OtherIntervalsSeconds" priority="2" />
+      <Item value="Timer" priority="1" />
+      <Item value="var" priority="0" />
+      <Item value="dragonTimeSpan" priority="0" />
+      <Item value="timerIntervalToAdd" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Timers.Timer">
+      <Item value="Interval" priority="1" />
+      <Item value="Start`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

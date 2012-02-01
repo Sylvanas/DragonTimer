@@ -2,7 +2,6 @@ using System;
 using System.Windows.Forms;
 using System.Timers;
 using System.Speech.Synthesis;
-
 namespace DragonTimer
 {
 
@@ -17,9 +16,7 @@ namespace DragonTimer
         public MainWindow()
         {
             InitializeComponent();
-
             _speech = new SpeechSynthesizer {Volume = 100, Rate = -2};
-            
         }        
 
         #region key combinations
@@ -28,13 +25,13 @@ namespace DragonTimer
         /// </summary>
         static readonly Keys[] KeyComb = new[] { Keys.LControlKey, Keys.Oemtilde };
         static readonly Keys[] VoiceKeyComb = new[] { Keys.LControlKey, Keys.Z };
-        #endregion        
+        #endregion
 
         #region Jungle static variables
         /// <summary>
         /// Jungle static variables
         /// </summary>
-        const int DragonRespawnSeconds = 360;
+        const int DragonRespawnSeconds = 36;
         #endregion
 
         #region timer
@@ -43,7 +40,7 @@ namespace DragonTimer
         /// </summary>
         static readonly System.Timers.Timer Timer = new System.Timers.Timer();
         const int LowestFrequency = 2500;
-        static int _interval = (DragonRespawnSeconds - 120);
+        static int _interval = (DragonRespawnSeconds - 12);
         const int AlertInterval = 30;
         #endregion
 
@@ -57,11 +54,13 @@ namespace DragonTimer
         //static SoundPlayer _simpleSound = new SoundPlayer("sound.WAV");
         #endregion
 
+        private EventTrigger dragonEvent;
 
         private void Form1Load(object sender, EventArgs e)
         {
             HookManager.KeyDown += HookManagerKeyDown;
             Timer.Elapsed += OnTimedEvent;
+            dragonEvent = new EventTrigger(new[] { Keys.LControlKey, Keys.Oemtilde }, new[] { Keys.LControlKey, Keys.Z }, 130, 120, 30, true);
         }
 
         private void HookManagerKeyDown(object sender, KeyEventArgs e)
@@ -72,64 +71,7 @@ namespace DragonTimer
             }
 
             _keysPressed[_keysPressed.Length - 1] = e.KeyCode;
-
-            bool checkDragonKill = true;
-            bool checkDragonCheck = true;
-            for (var i = 0; i < KeyComb.Length; i++)
-            {
-                // check for Dragon Kill Comb
-                if (KeyComb[i] != _keysPressed[i])
-                {
-                    checkDragonKill = false;
-                }
-
-                // check for Dragon Check Comb
-                if (VoiceKeyComb[i] != _keysPressed[i])
-                {
-                    checkDragonCheck = false;
-                }
-            }
-
-            // check if Dragon Kill Comb was pressed
-            if (checkDragonKill)
-            {
-                _keysPressed = new[] { Keys.Space, Keys.Space };
-                if (_interval == 0)
-                    Timer.Interval = 1;
-                else
-                    Timer.Interval = _interval * 1000;
-                _count = 0;
-                _dragonKilledTime = DateTime.Now;
-
-                Timer.Start();
-            }
-
-            // check if Dragon Check Comb was pressed
-            if (checkDragonCheck)
-            {
-                if (_dragonKilledTime == null)
-                {
-                    // say "Dragon is up"
-                    _speech.SpeakAsync("Dragon is up!");
-                }
-                else
-                {
-                    TimeSpan dragonTimeSpan = Convert.ToDateTime(_dragonKilledTime).AddSeconds(DragonRespawnSeconds) - DateTime.Now;
-                    if (dragonTimeSpan.TotalMilliseconds <= 0)
-                    {
-                        // say "Dragon is up"
-                        _speech.SpeakAsync("Dragon is up!");
-                        _dragonKilledTime = null;
-                    }
-                    else
-                    {
-                        int minutes = dragonTimeSpan.Minutes;
-                        int seconds = dragonTimeSpan.Seconds;
-                        _speech.SpeakAsync(String.Format("Dragon in {0} minutes and {1} seconds", minutes, seconds));
-                        // rotate minutes and seconds
-                    }
-                }                
-            }
+            dragonEvent.CheckShortcuts(_keysPressed);
         }
 
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -140,14 +82,14 @@ namespace DragonTimer
         private static void TimerEvent()
         {
             Timer.Stop();
-            Console.Beep(LowestFrequency + _count * 500, 400);
-            Console.Beep(LowestFrequency + _count * 500, 400);
-            Console.Beep(LowestFrequency + _count * 500, 400);
+            //Console.Beep(LowestFrequency + _count * 500, 400);
+            //Console.Beep(LowestFrequency + _count * 500, 400);
+            //Console.Beep(LowestFrequency + _count * 500, 400);
             //simpleSound.Play(); 
 
             if (_interval < DragonRespawnSeconds)
             {
-                _interval += 30;
+                _interval += 3;
                 _count++;
                 Timer.Interval = AlertInterval * 1000;
                 Timer.Start();

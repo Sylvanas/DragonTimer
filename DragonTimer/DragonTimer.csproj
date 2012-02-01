@@ -111,6 +111,8 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BaseEventTrigger.cs" />
+    <Compile Include="EventTrigger.cs" />
     <Compile Include="GlobalEventProvider.cs">
       <SubType>Component</SubType>
     </Compile>
