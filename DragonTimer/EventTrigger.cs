@@ -9,15 +9,40 @@ namespace DragonTimer
 {
     public class EventTrigger : BaseEventTrigger
     {
-        public EventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue)
-            : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, firstIntervalSecondsValue, otherIntervalsSecondsValue, useOtherIntervalsValue) 
+        public EventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessage)
+            : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, firstIntervalSecondsValue, otherIntervalsSecondsValue, useOtherIntervalsValue, finishedMessage) 
         { }
 
-
-
-        protected override void OnNullEventStartedTime()
+        protected override void OnFirstTimedEvent()
         {
-            Speech.SpeakAsync("Dragon is up!");
+            if (_elapsedSeconds == 0)
+            {
+                _elapsedSeconds += FirstInterval;
+                Timer.Interval = OtherIntervalsSeconds * 1000;
+                Timer.Start();
+                OnEventTime(RespawnSeconds - FirstInterval);
+                return;
+            }
+            _elapsedSeconds += OtherIntervalsSeconds;
+            if (_elapsedSeconds < RespawnSeconds)
+            {
+                var timerIntervalToAdd = OtherIntervalsSeconds;
+                if (RespawnSeconds - _elapsedSeconds < timerIntervalToAdd)
+                {
+                    timerIntervalToAdd = RespawnSeconds - _elapsedSeconds;
+                }
+                if (UseOtherIntervals)
+                {
+                    OnEventTime(RespawnSeconds - _elapsedSeconds);
+                }
+                Timer.Interval = timerIntervalToAdd * 1000;
+                Timer.Start();
+            }
+            else
+            {
+                OnNullEventStartedTime(true);
+                EventStartedTime = null;
+            }
         }
 
         protected override void OnEventTime(int dragonTimeSpan)

@@ -15,9 +15,10 @@ namespace DragonTimer
         protected int FirstIntervalSeconds;
         protected int OtherIntervalsSeconds;
         protected bool UseOtherIntervals;
-        private int _elapsedSeconds;
+        protected int _elapsedSeconds;
         protected int RespawnSeconds;
         protected int FirstInterval;
+        private string finishedMessage;
 
         protected System.Timers.Timer Timer;
         protected DateTime? EventStartedTime;
@@ -39,7 +40,7 @@ namespace DragonTimer
         ///<param name="firstIntervalSecondsValue"></param>
         ///<param name="otherIntervalsSecondsValue"></param>
         ///<param name="useOtherIntervalsValue"></param>
-        public BaseEventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue)
+        public BaseEventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessageValue)
         {
             KeyCombinationStart = keyCombinationStart;
             KeyCombinationAction = keyCombinationAction;
@@ -47,6 +48,7 @@ namespace DragonTimer
             OtherIntervalsSeconds = otherIntervalsSecondsValue;
             UseOtherIntervals = useOtherIntervalsValue;
             RespawnSeconds = respawnSecondsValue;
+            finishedMessage = finishedMessageValue;
             InitializeOtherNonParametricObjects();
             Timer.Elapsed += OnTimedEvent;
         }
@@ -95,7 +97,7 @@ namespace DragonTimer
         {
             if (EventStartedTime == null)
             {
-                OnNullEventStartedTime();
+                OnNullEventStartedTime(false);
                 return;
             }
             var dragonTimeSpan = Convert.ToDateTime(EventStartedTime).AddSeconds(RespawnSeconds) - DateTime.Now;
@@ -107,37 +109,19 @@ namespace DragonTimer
 
         protected void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            if (_elapsedSeconds == 0)
+            OnFirstTimedEvent();
+        }
+
+        protected void OnNullEventStartedTime(bool voice)
+        {
+            EventStartedTime = null;
+            if (voice)
             {
-                _elapsedSeconds += FirstInterval;
-                Timer.Interval = OtherIntervalsSeconds * 1000;
-                Timer.Start();
-                OnEventTime(RespawnSeconds - FirstInterval);
-                return;
-            }
-            _elapsedSeconds += OtherIntervalsSeconds;
-            if (_elapsedSeconds < RespawnSeconds)
-            {
-                var timerIntervalToAdd = OtherIntervalsSeconds;
-                if (RespawnSeconds - _elapsedSeconds < timerIntervalToAdd)
-                {
-                    timerIntervalToAdd = RespawnSeconds - _elapsedSeconds;
-                }
-                if(UseOtherIntervals)
-                {
-                    OnEventTime(RespawnSeconds - _elapsedSeconds);
-                }
-                Timer.Interval = timerIntervalToAdd * 1000;
-                Timer.Start();
-            }
-            else
-            {
-                OnNullEventStartedTime();
-                EventStartedTime = null;
+                Speech.SpeakAsync(finishedMessage);
             }
         }
 
-        protected virtual void OnNullEventStartedTime() { }
+        protected virtual void OnFirstTimedEvent() { }
         protected virtual void OnEventTime(int dragonTimeSpan) { }
 
         protected List<int> GetMinutesAndSeconds(int seconds)
