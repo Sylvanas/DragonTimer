@@ -9,7 +9,7 @@ namespace DragonTimer
 {
     public class EventTrigger : BaseEventTrigger
     {
-        public EventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessage)
+        public EventTrigger(List<Keys> keyCombinationStart, List<Keys> keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessage)
             : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, firstIntervalSecondsValue, otherIntervalsSecondsValue, useOtherIntervalsValue, finishedMessage) 
         { }
 

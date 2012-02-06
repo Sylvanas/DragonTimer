@@ -10,8 +10,8 @@ namespace DragonTimer
     ///</summary>
     public class BaseEventTrigger
     {
-        protected Keys[] KeyCombinationStart;
-        protected Keys[] KeyCombinationAction;
+        protected List<Keys> KeyCombinationStart;
+        protected List<Keys> KeyCombinationAction;
         protected int FirstIntervalSeconds;
         protected int OtherIntervalsSeconds;
         protected bool UseOtherIntervals;
@@ -40,7 +40,7 @@ namespace DragonTimer
         ///<param name="firstIntervalSecondsValue"></param>
         ///<param name="otherIntervalsSecondsValue"></param>
         ///<param name="useOtherIntervalsValue"></param>
-        public BaseEventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessageValue)
+        public BaseEventTrigger( List<Keys> keyCombinationStart,  List<Keys> keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessageValue)
         {
             KeyCombinationStart = keyCombinationStart;
             KeyCombinationAction = keyCombinationAction;
@@ -56,7 +56,7 @@ namespace DragonTimer
         ///<summary>
         ///</summary>
         ///<param name="keyCombination"></param>
-        public void CheckShortcuts(Keys[] keyCombination)
+        public void CheckShortcuts( List<Keys> keyCombination)
         {
             if (CheckShortcut(keyCombination, KeyCombinationStart))
             {
@@ -77,15 +77,15 @@ namespace DragonTimer
             _elapsedSeconds = 0;
         }
 
-        private static bool CheckShortcut(Keys[] imputKeyCombination, Keys[] keyCombination)
+        private static bool CheckShortcut( List<Keys> imputKeyCombination,  List<Keys> keyCombination)
         {
-            if (imputKeyCombination.Length < keyCombination.Length)
+            if (imputKeyCombination.Count < keyCombination.Count)
             {
                 return false;
             }
-            for (int i = 1; i <= keyCombination.Length; i++)
+            for (int i = 1; i <= keyCombination.Count; i++)
             {
-                if (keyCombination[keyCombination.Length - i] != imputKeyCombination[imputKeyCombination.Length - i])
+                if (keyCombination[keyCombination.Count - i] != imputKeyCombination[imputKeyCombination.Count - i])
                 {
                     return false;
                 }

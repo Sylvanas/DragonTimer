@@ -1,56 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
-using System.Timers;
-using System.Speech.Synthesis;
 
 namespace DragonTimer
 {
     public class AlarmedEventTrigger : BaseEventTrigger
     {
-        private List<int> alarmTimers = new List<int>();
-        private List<bool> activateCurrentTimerTask = new List<bool>();
-        private string stringBeforeSound;
-        private bool addStringBeforeActualSound;
-        private int currentTimerTask;
+        private readonly List<int> _alarmTimers = new List<int>();
+        private List<bool> _activateCurrentTimerTask = new List<bool>();
+        private string _stringBeforeSound;
+        private bool _addStringBeforeActualSound;
+        private int _currentTimerTask;
 
-        public AlarmedEventTrigger(Keys[] keyCombinationStart, Keys[] keyCombinationAction,
+        ///<summary>
+        ///</summary>
+        ///<param name="keyCombinationStart"></param>
+        ///<param name="keyCombinationAction"></param>
+        ///<param name="respawnSecondsValue"></param>
+        ///<param name="firstIntervalSecondsValue"></param>
+        ///<param name="otherIntervalsSecondsValue"></param>
+        ///<param name="useOtherIntervalsValue"></param>
+        ///<param name="activateCurrentTimerTaskValue"></param>
+        ///<param name="stringBeforeSoundValue"></param>
+        ///<param name="addStringBeforeActualSoundValue"></param>
+        ///<param name="finishedMessage"></param>
+        ///<param name="mainWindow"></param>
+        public AlarmedEventTrigger(string labelText, List<Keys> keyCombinationStart, List<Keys> keyCombinationAction,
             int respawnSecondsValue, List<int> firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue,
-            List<bool> activateCurrentTimerTaskValue, string stringBeforeSoundValue, bool addStringBeforeActualSoundValue, string finishedMessage)
+            List<bool> activateCurrentTimerTaskValue, string stringBeforeSoundValue, bool addStringBeforeActualSoundValue, string finishedMessage, MainWindow mainWindow)
             : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, firstIntervalSecondsValue[0], otherIntervalsSecondsValue, useOtherIntervalsValue, finishedMessage) 
         {
-            activateCurrentTimerTask = activateCurrentTimerTaskValue;
+            _activateCurrentTimerTask = activateCurrentTimerTaskValue;
             firstIntervalSecondsValue.Add(0);
-            alarmTimers.Add(RespawnSeconds - firstIntervalSecondsValue[0]);
-            for (int i = 1; i < firstIntervalSecondsValue.Count; i++)
+            _alarmTimers.Add(RespawnSeconds - firstIntervalSecondsValue[0]);
+            for (var i = 1; i < firstIntervalSecondsValue.Count; i++)
             {
-                alarmTimers.Add(firstIntervalSecondsValue[i-1] - firstIntervalSecondsValue[i]);
+                _alarmTimers.Add(firstIntervalSecondsValue[i-1] - firstIntervalSecondsValue[i]);
             }
-            stringBeforeSound = stringBeforeSoundValue;
-            addStringBeforeActualSound = addStringBeforeActualSoundValue;
+            _stringBeforeSound = stringBeforeSoundValue;
+            _addStringBeforeActualSound = addStringBeforeActualSoundValue;
+            new EventGUIBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, firstIntervalSecondsValue, activateCurrentTimerTaskValue, addStringBeforeActualSoundValue, finishedMessage);
         }
 
         protected override void OnFirstTimedEvent()
         {
             Timer.Stop();
-            _elapsedSeconds += alarmTimers[currentTimerTask];
+            _elapsedSeconds += _alarmTimers[_currentTimerTask];
             if (_elapsedSeconds != RespawnSeconds)
             {
-                if (activateCurrentTimerTask[currentTimerTask])
+                if (_activateCurrentTimerTask[_currentTimerTask])
                 {
                     OnEventTime(RespawnSeconds - _elapsedSeconds);
                 }
             }
             else
             {
-                OnNullEventStartedTime(activateCurrentTimerTask[currentTimerTask]);
-                currentTimerTask = 0;
+                OnNullEventStartedTime(_activateCurrentTimerTask[_currentTimerTask]);
+                _currentTimerTask = 0;
                 return;
             }
-            Timer.Interval = alarmTimers[currentTimerTask + 1] * 1000;
+            Timer.Interval = _alarmTimers[_currentTimerTask + 1] * 1000;
             Timer.Start();
-            currentTimerTask++;
+            _currentTimerTask++;
         }
 
         protected override void OnEventTime(int dragonTimeSpan)
@@ -65,6 +76,12 @@ namespace DragonTimer
             }
         }
 
-        
+        ///<summary>
+        ///</summary>
+        ///<param name="newValues"></param>
+        public void SetCurrentTimerTask(List<bool> newValues)
+        {
+            _activateCurrentTimerTask = newValues;
+        }
     }
 }
