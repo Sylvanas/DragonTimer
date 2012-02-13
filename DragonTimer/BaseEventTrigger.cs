@@ -15,10 +15,10 @@ namespace DragonTimer
         protected int FirstIntervalSeconds;
         protected int OtherIntervalsSeconds;
         protected bool UseOtherIntervals;
-        protected int _elapsedSeconds;
+        protected int ElapsedSeconds;
         protected int RespawnSeconds;
         protected int FirstInterval;
-        private string finishedMessage;
+        private string _finishedMessage;
 
         protected System.Timers.Timer Timer;
         protected DateTime? EventStartedTime;
@@ -40,7 +40,8 @@ namespace DragonTimer
         ///<param name="firstIntervalSecondsValue"></param>
         ///<param name="otherIntervalsSecondsValue"></param>
         ///<param name="useOtherIntervalsValue"></param>
-        public BaseEventTrigger( List<Keys> keyCombinationStart,  List<Keys> keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessageValue)
+        ///<param name="finishedMessageValue"></param>
+        public BaseEventTrigger(List<Keys> keyCombinationStart, List<Keys> keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessageValue)
         {
             KeyCombinationStart = keyCombinationStart;
             KeyCombinationAction = keyCombinationAction;
@@ -48,15 +49,31 @@ namespace DragonTimer
             OtherIntervalsSeconds = otherIntervalsSecondsValue;
             UseOtherIntervals = useOtherIntervalsValue;
             RespawnSeconds = respawnSecondsValue;
-            finishedMessage = finishedMessageValue;
+            _finishedMessage = finishedMessageValue;
             InitializeOtherNonParametricObjects();
             Timer.Elapsed += OnTimedEvent;
         }
 
         ///<summary>
         ///</summary>
+        ///<param name="keyCombinationStart"></param>
+        public void SetKeycombinationStart(List<Keys> keyCombinationStart)
+        {
+            KeyCombinationAction = keyCombinationStart;
+        }
+
+        ///<summary>
+        ///</summary>
+        ///<param name="keyCombinationAction"></param>
+        public void SetKeycombinationAction(List<Keys> keyCombinationAction)
+        {
+            KeyCombinationAction = keyCombinationAction;
+        }
+
+        ///<summary>
+        ///</summary>
         ///<param name="keyCombination"></param>
-        public void CheckShortcuts( List<Keys> keyCombination)
+        public void CheckShortcuts(List<Keys> keyCombination)
         {
             if (CheckShortcut(keyCombination, KeyCombinationStart))
             {
@@ -74,10 +91,10 @@ namespace DragonTimer
             EventStartedTime = DateTime.Now;
             Timer.Start();
             Timer.Interval = FirstInterval * 1000;
-            _elapsedSeconds = 0;
+            ElapsedSeconds = 0;
         }
 
-        private static bool CheckShortcut( List<Keys> imputKeyCombination,  List<Keys> keyCombination)
+        private static bool CheckShortcut(List<Keys> imputKeyCombination, List<Keys> keyCombination)
         {
             if (imputKeyCombination.Count < keyCombination.Count)
             {
@@ -117,7 +134,7 @@ namespace DragonTimer
             EventStartedTime = null;
             if (voice)
             {
-                Speech.SpeakAsync(finishedMessage);
+                Speech.SpeakAsync(_finishedMessage);
             }
         }
 
@@ -129,6 +146,14 @@ namespace DragonTimer
             var result = new List<int> { seconds / 60 };
             result.Add(seconds - result[0] * 60);
             return result;
+        }
+
+        ///<summary>
+        ///</summary>
+        ///<param name="finishMessage"></param>
+        public void SetFinishMessage(string finishMessage)
+        {
+            _finishedMessage = finishMessage;
         }
     }
 }

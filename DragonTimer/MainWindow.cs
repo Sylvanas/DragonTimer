@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 namespace DragonTimer
 {
-
     ///<summary>
     ///</summary>
     public partial class MainWindow : Form
@@ -42,28 +41,6 @@ namespace DragonTimer
             }
         }
 
-        /*#region booleanValues
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            SetWarningBoolean();
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            SetWarningBoolean();
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            SetWarningBoolean();
-        }
-
-        private void SetWarningBoolean()
-        {
-            _alarmedDragonEvent.SetCurrentTimerTask(new List<bool> { FirstTimerCheckBox.Checked, SecondTimerCheckBox.Checked, ThirdTimerCheckBox.Checked });
-        }
-        #endregion*/
-
         #region
         private List<int> SetTaskValues()
         {
@@ -75,7 +52,7 @@ namespace DragonTimer
                 label8.Text = "Please set valid numbers for timer warnings";
                 return null;
             }
-            return new List<int> { };
+            return new List<int>();
         }
         #endregion
 

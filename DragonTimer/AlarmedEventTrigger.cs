@@ -4,6 +4,8 @@ using System.Windows.Forms;
 
 namespace DragonTimer
 {
+    ///<summary>
+    ///</summary>
     public class AlarmedEventTrigger : BaseEventTrigger
     {
         private readonly List<int> _alarmTimers = new List<int>();
@@ -14,6 +16,7 @@ namespace DragonTimer
 
         ///<summary>
         ///</summary>
+        ///<param name="labelText"></param>
         ///<param name="keyCombinationStart"></param>
         ///<param name="keyCombinationAction"></param>
         ///<param name="respawnSecondsValue"></param>
@@ -39,18 +42,34 @@ namespace DragonTimer
             }
             _stringBeforeSound = stringBeforeSoundValue;
             _addStringBeforeActualSound = addStringBeforeActualSoundValue;
-            new EventGUIBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, firstIntervalSecondsValue, activateCurrentTimerTaskValue, addStringBeforeActualSoundValue, finishedMessage);
+            new EventGuiBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, firstIntervalSecondsValue, activateCurrentTimerTaskValue, addStringBeforeActualSoundValue, finishedMessage);
+        }
+
+        ///<summary>
+        ///</summary>
+        ///<param name="list"></param>
+        public void SetActivationOfTimerTasks(List<bool> list)
+        {
+            _activateCurrentTimerTask = list;
+        }
+
+        ///<summary>
+        ///</summary>
+        ///<param name="value"></param>
+        public void SetStringBeforeTimeWarning(bool value)
+        {
+            _addStringBeforeActualSound = value;
         }
 
         protected override void OnFirstTimedEvent()
         {
             Timer.Stop();
-            _elapsedSeconds += _alarmTimers[_currentTimerTask];
-            if (_elapsedSeconds != RespawnSeconds)
+            ElapsedSeconds += _alarmTimers[_currentTimerTask];
+            if (ElapsedSeconds != RespawnSeconds)
             {
                 if (_activateCurrentTimerTask[_currentTimerTask])
                 {
-                    OnEventTime(RespawnSeconds - _elapsedSeconds);
+                    OnEventTime(RespawnSeconds - ElapsedSeconds);
                 }
             }
             else
@@ -67,12 +86,18 @@ namespace DragonTimer
         protected override void OnEventTime(int dragonTimeSpan)
         {
             var minutesSeconds = GetMinutesAndSeconds(dragonTimeSpan);
+            var stringBeforeSound = "";
+            if (_addStringBeforeActualSound)
+            {
+                stringBeforeSound = _stringBeforeSound;
+            }
+
             if(minutesSeconds[0] > 0)
             {
-                Speech.SpeakAsync(String.Format("Dragon in {0} minutes and {1} seconds", minutesSeconds[0], minutesSeconds[1]));
+                Speech.SpeakAsync(String.Format(stringBeforeSound + " {0} minutes and {1} seconds", minutesSeconds[0], minutesSeconds[1]));
             } else
             {
-                Speech.SpeakAsync(String.Format("Dragon in {0} seconds", minutesSeconds[1]));
+                Speech.SpeakAsync(String.Format(stringBeforeSound + " {0} seconds", minutesSeconds[1]));
             }
         }
 

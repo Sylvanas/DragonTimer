@@ -1,39 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
-using System.Timers;
-using System.Speech.Synthesis;
 
 namespace DragonTimer
 {
+    ///<summary>
+    ///</summary>
     public class EventTrigger : BaseEventTrigger
     {
+        ///<summary>
+        ///</summary>
+        ///<param name="keyCombinationStart"></param>
+        ///<param name="keyCombinationAction"></param>
+        ///<param name="respawnSecondsValue"></param>
+        ///<param name="firstIntervalSecondsValue"></param>
+        ///<param name="otherIntervalsSecondsValue"></param>
+        ///<param name="useOtherIntervalsValue"></param>
+        ///<param name="finishedMessage"></param>
         public EventTrigger(List<Keys> keyCombinationStart, List<Keys> keyCombinationAction, int respawnSecondsValue, int firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue, string finishedMessage)
             : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, firstIntervalSecondsValue, otherIntervalsSecondsValue, useOtherIntervalsValue, finishedMessage) 
         { }
 
         protected override void OnFirstTimedEvent()
         {
-            if (_elapsedSeconds == 0)
+            if (ElapsedSeconds == 0)
             {
-                _elapsedSeconds += FirstInterval;
+                ElapsedSeconds += FirstInterval;
                 Timer.Interval = OtherIntervalsSeconds * 1000;
                 Timer.Start();
                 OnEventTime(RespawnSeconds - FirstInterval);
                 return;
             }
-            _elapsedSeconds += OtherIntervalsSeconds;
-            if (_elapsedSeconds < RespawnSeconds)
+            ElapsedSeconds += OtherIntervalsSeconds;
+            if (ElapsedSeconds < RespawnSeconds)
             {
                 var timerIntervalToAdd = OtherIntervalsSeconds;
-                if (RespawnSeconds - _elapsedSeconds < timerIntervalToAdd)
+                if (RespawnSeconds - ElapsedSeconds < timerIntervalToAdd)
                 {
-                    timerIntervalToAdd = RespawnSeconds - _elapsedSeconds;
+                    timerIntervalToAdd = RespawnSeconds - ElapsedSeconds;
                 }
                 if (UseOtherIntervals)
                 {
-                    OnEventTime(RespawnSeconds - _elapsedSeconds);
+                    OnEventTime(RespawnSeconds - ElapsedSeconds);
                 }
                 Timer.Interval = timerIntervalToAdd * 1000;
                 Timer.Start();

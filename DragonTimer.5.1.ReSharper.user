@@ -12,41 +12,46 @@
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Callbacks.cs" caret="11815" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:HookManager.Windows.cs" caret="5819" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:Program.cs" caret="0" fromTop="0" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="1138" fromTop="30" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1052" fromTop="25" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="674" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.resx" caret="0" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.Designer.cs" caret="0" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="2375" fromTop="49" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AppKeys.cs" caret="0" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5291" fromTop="7" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="2959" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="1916" fromTop="30" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="385" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="28" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="930" fromTop="15" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="14" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="21" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="30" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="3" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="524" fromTop="12" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="12" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5316" fromTop="22" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5240" fromTop="28" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="1230" fromTop="31" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="1195" fromTop="30" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="3845" fromTop="12" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4158" fromTop="14" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="1047" fromTop="9" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="930" fromTop="22" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="162" fromTop="11" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="374" fromTop="16" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="2433" fromTop="13" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="4752" fromTop="20" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="177" fromTop="9" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1467" fromTop="16" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="1074" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="2143" fromTop="19" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="80" fromTop="2" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="46" fromTop="2" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="674" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="3932" fromTop="24" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="3973" fromTop="24" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="4233" fromTop="32" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="384" fromTop="12" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="2609" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="7705" fromTop="15" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="9842" fromTop="34" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="4363" fromTop="18" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="5049" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="6097" fromTop="21" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="6822" fromTop="23" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="9610" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="5290" fromTop="16" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="7071" fromTop="22" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="816" fromTop="11" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="71" fromTop="2" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="2829" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="10909" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="600" fromTop="14" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="10365" fromTop="21" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="10376" fromTop="21" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="7629" fromTop="13" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="8514" fromTop="23" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="9404" fromTop="33" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="430" fromTop="13" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="608" fromTop="11" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5303" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="11246" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="11556" fromTop="20" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="1573" fromTop="23" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -66,34 +71,34 @@
       <Item value="base" priority="1" />
       <Item value="seconds" priority="2" />
       <Item value="keyCombination" priority="1" />
-      <Item value="public" priority="4" />
+      <Item value="public" priority="12" />
       <Item value="protected" priority="5" />
-      <Item value="virtual" priority="0" />
+      <Item value="virtual" priority="1" />
       <Item value="override" priority="1" />
-      <Item value="return" priority="6" />
-      <Item value="false" priority="1" />
-      <Item value="private" priority="6" />
-      <Item value="readonly" priority="0" />
-      <Item value="int" priority="7" />
-      <Item value="bool" priority="2" />
+      <Item value="return" priority="11" />
+      <Item value="false" priority="2" />
+      <Item value="private" priority="32" />
+      <Item value="readonly" priority="1" />
+      <Item value="int" priority="12" />
+      <Item value="bool" priority="3" />
       <Item value="firstIntervalSecondsValue" priority="0" />
       <Item value="otherIntervalsSeconds" priority="0" />
       <Item value="otherIntervalsSecondsValue" priority="0" />
       <Item value="useOtherIntervals" priority="0" />
       <Item value="useOtherIntervalsValue" priority="0" />
-      <Item value="void" priority="2" />
+      <Item value="void" priority="13" />
       <Item value="CheckShortcut`0" priority="0" />
       <Item value="eleapsedSeconds" priority="6" />
-      <Item value="null" priority="0" />
-      <Item value="if" priority="8" />
-      <Item value="else" priority="2" />
+      <Item value="null" priority="2" />
+      <Item value="if" priority="10" />
+      <Item value="else" priority="3" />
       <Item value="DragonRespawnSeconds" priority="2" />
       <Item value="OtherIntervalsSeconds" priority="2" />
       <Item value="Timer" priority="3" />
-      <Item value="var" priority="3" />
+      <Item value="var" priority="7" />
       <Item value="dragonTimeSpan" priority="1" />
       <Item value="timerIntervalToAdd" priority="1" />
-      <Item value="new" priority="2" />
+      <Item value="new" priority="10" />
       <Item value="SpVoice`0" priority="0" />
       <Item value="voice" priority="0" />
       <Item value="EventTrigger`0" priority="0" />
@@ -101,12 +106,71 @@
       <Item value="true" priority="0" />
       <Item value="_keysPressed" priority="0" />
       <Item value="imputKeyCombination" priority="1" />
-      <Item value="Length" priority="1" />
+      <Item value="Length" priority="2" />
       <Item value="List" priority="1" />
       <Item value="result" priority="3" />
       <Item value="GetMinutesAndSeconds`0" priority="0" />
       <Item value="minutesSeconds" priority="1" />
       <Item value="UseOtherIntervals" priority="0" />
+      <Item value="checkBox1" priority="0" />
+      <Item value="textBox4" priority="0" />
+      <Item value="AlarmedEventTrigger`0" priority="1" />
+      <Item value="alarmedEventTrigger" priority="0" />
+      <Item value="MainWindow`0" priority="0" />
+      <Item value="basePoint" priority="0" />
+      <Item value="Buildforms`0" priority="0" />
+      <Item value="ComboBox`0" priority="1" />
+      <Item value="CheckBox`0" priority="0" />
+      <Item value="TextBox`0" priority="1" />
+      <Item value="Size`0" priority="3" />
+      <Item value="Size" priority="2" />
+      <Item value="EventGUIBuilder`0" priority="0" />
+      <Item value="this" priority="1" />
+      <Item value="_basePoint" priority="4" />
+      <Item value="_firstTimerTextBox" priority="1" />
+      <Item value="_firstShortcutKey" priority="1" />
+      <Item value="AddFirstElement`0" priority="0" />
+      <Item value="Point" priority="1" />
+      <Item value="currentX" priority="2" />
+      <Item value="static" priority="7" />
+      <Item value="CheckBox" priority="0" />
+      <Item value="_firstTimerCheckBox" priority="3" />
+      <Item value="_checkBoxHeightdifference" priority="0" />
+      <Item value="_checkBoxSize" priority="0" />
+      <Item value="_tabIndex" priority="0" />
+      <Item value="_mainWindow" priority="0" />
+      <Item value="const" priority="0" />
+      <Item value="keyCombinationStart" priority="0" />
+      <Item value="keyCombinationAction" priority="0" />
+      <Item value="_activateCurrentTimerTaskValue" priority="0" />
+      <Item value="activateCurrentTimerTaskValue" priority="0" />
+      <Item value="_addStringBeforeActualSoundValue" priority="1" />
+      <Item value="addStringBeforeActualSoundValue" priority="0" />
+      <Item value="_finishedMessage" priority="1" />
+      <Item value="finishedMessage" priority="0" />
+      <Item value="_intervalSecondsValues" priority="0" />
+      <Item value="string" priority="5" />
+      <Item value="Label`0" priority="0" />
+      <Item value="labelText" priority="0" />
+      <Item value="AppKeys`0" priority="3" />
+      <Item value="stringValues" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="stringValue" priority="0" />
+      <Item value="case" priority="0" />
+      <Item value="StringValues" priority="2" />
+      <Item value="Keys`0" priority="0" />
+      <Item value="for" priority="0" />
+      <Item value="key" priority="0" />
+      <Item value="i" priority="0" />
+      <Item value="_keyCombinationStart" priority="0" />
+      <Item value="ShortcutComboBoxSelectedIndexChanged`0" priority="0" />
+      <Item value="_secondShortcutKey" priority="0" />
+      <Item value="_stringBeforeSound" priority="1" />
+      <Item value="_alarmedEventTrigger" priority="1" />
+      <Item value="value" priority="0" />
+      <Item value="_timeOnlyCheckBox" priority="1" />
+      <Item value="finishMessage" priority="0" />
+      <Item value="_finalMessageTextBox" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Timers.Timer">
       <Item value="Interval" priority="1" />
@@ -124,6 +188,66 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.CheckBox">
+      <Item value="Text" priority="0" />
+      <Item value="Checked" priority="3" />
+      <Item value="Size" priority="1" />
+      <Item value="Location" priority="0" />
+      <Item value="TabIndex" priority="0" />
+      <Item value="CheckedChanged" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="2" />
+      <Item value="TextChanged" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Point">
+      <Item value="X" priority="3" />
+      <Item value="Y" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="ValueMember" priority="0" />
+      <Item value="Items" priority="2" />
+      <Item value="Size" priority="0" />
+      <Item value="SelectedIndex" priority="0" />
+      <Item value="SelectedIndexChanged" priority="0" />
+      <Item value="SelectedValue" priority="0" />
+      <Item value="SelectedItem" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox+ObjectCollection">
+      <Item value="AddRange`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DragonTimer.MainWindow">
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Control+ControlCollection">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Size">
+      <Item value="Width" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Keys">
+      <Item value="LControlKey" priority="0" />
+      <Item value="X" priority="0" />
+      <Item value="A" priority="0" />
+      <Item value="Z" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DragonTimer.AppKeys">
+      <Item value="GetKeyFromStringValue`0" priority="1" />
+      <Item value="GetStringValues`0" priority="0" />
+      <Item value="GetKeyPosition`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DragonTimer.AlarmedEventTrigger">
+      <Item value="SetKeycombinationStart`0" priority="0" />
+      <Item value="SetActivationOfTimerTasks`0" priority="0" />
+      <Item value="SetStringBeforeTimeWarning`0" priority="0" />
+      <Item value="SetFinishMessage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
