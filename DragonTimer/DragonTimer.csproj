@@ -119,7 +119,6 @@
     </Compile>
     <Compile Include="BaseEventTrigger.cs" />
     <Compile Include="EventGUIBuilder.cs" />
-    <Compile Include="EventTrigger.cs" />
     <Compile Include="GlobalEventProvider.cs">
       <SubType>Component</SubType>
     </Compile>

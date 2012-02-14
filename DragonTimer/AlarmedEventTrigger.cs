@@ -15,7 +15,6 @@ namespace DragonTimer
         private List<bool> _activateCurrentTimerTask = new List<bool>();
         private readonly string _stringBeforeSound;
         private bool _addStringBeforeActualSound;
-        private int _currentTimerTask;
 
         ///<summary>
         ///</summary>
@@ -23,7 +22,7 @@ namespace DragonTimer
         ///<param name="keyCombinationStart"></param>
         ///<param name="keyCombinationAction"></param>
         ///<param name="respawnSecondsValue"></param>
-        ///<param name="firstIntervalSecondsValue"></param>
+        ///<param name="alarmTimers"></param>
         ///<param name="otherIntervalsSecondsValue"></param>
         ///<param name="useOtherIntervalsValue"></param>
         ///<param name="activateCurrentTimerTaskValue"></param>
@@ -32,20 +31,15 @@ namespace DragonTimer
         ///<param name="finishedMessage"></param>
         ///<param name="mainWindow"></param>
         public AlarmedEventTrigger(string labelText, List<Keys> keyCombinationStart, List<Keys> keyCombinationAction,
-            int respawnSecondsValue, List<int> firstIntervalSecondsValue, int otherIntervalsSecondsValue, bool useOtherIntervalsValue,
+            int respawnSecondsValue, List<int> alarmTimers, int otherIntervalsSecondsValue, bool useOtherIntervalsValue,
             List<bool> activateCurrentTimerTaskValue, string stringBeforeSoundValue, bool addStringBeforeActualSoundValue, string finishedMessage, MainWindow mainWindow)
-            : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, firstIntervalSecondsValue[0], otherIntervalsSecondsValue, useOtherIntervalsValue, finishedMessage)
+            : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, alarmTimers[0], otherIntervalsSecondsValue, useOtherIntervalsValue, finishedMessage)
         {
             _activateCurrentTimerTask = activateCurrentTimerTaskValue;
-            firstIntervalSecondsValue.Add(0);
-            _alarmTimers.Add(RespawnSeconds - firstIntervalSecondsValue[0]);
-            for (var i = 1; i < firstIntervalSecondsValue.Count; i++)
-            {
-                _alarmTimers.Add(firstIntervalSecondsValue[i - 1] - firstIntervalSecondsValue[i]);
-            }
+            _alarmTimers = alarmTimers;
             _stringBeforeSound = stringBeforeSoundValue;
             _addStringBeforeActualSound = addStringBeforeActualSoundValue;
-            new EventGuiBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, firstIntervalSecondsValue, activateCurrentTimerTaskValue, addStringBeforeActualSoundValue, finishedMessage);
+            new EventGuiBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, alarmTimers, activateCurrentTimerTaskValue, addStringBeforeActualSoundValue, finishedMessage);
         }
 
         ///<summary>
@@ -64,26 +58,32 @@ namespace DragonTimer
             _addStringBeforeActualSound = value;
         }
 
+        private void CheckForAlarmTimer()
+        {
+            for (var i = 0; i < _alarmTimers.Count; i++)
+            {
+                if (_activateCurrentTimerTask[i] && (RespawnSeconds - ElapsedSeconds) == _alarmTimers[i])
+                {
+                    OnEventTime(_alarmTimers[i]);
+                }
+            }
+        }
+
         protected override void OnFirstTimedEvent()
         {
             Timer.Stop();
-            ElapsedSeconds += _alarmTimers[_currentTimerTask];
+            ElapsedSeconds++;
             if (ElapsedSeconds != RespawnSeconds)
             {
-                if (_activateCurrentTimerTask[_currentTimerTask])
-                {
-                    OnEventTime(RespawnSeconds - ElapsedSeconds);
-                }
+                CheckForAlarmTimer();
             }
             else
             {
-                OnNullEventStartedTime(_activateCurrentTimerTask[_currentTimerTask]);
-                _currentTimerTask = 0;
+                OnNullEventStartedTime(true);
                 return;
             }
-            Timer.Interval = _alarmTimers[_currentTimerTask + 1] * 1000;
+            Timer.Interval = 1 * 1000;
             Timer.Start();
-            _currentTimerTask++;
         }
 
         protected override void OnEventTime(int dragonTimeSpan)

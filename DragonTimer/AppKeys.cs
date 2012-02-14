@@ -1,42 +1,56 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace DragonTimer
 {
     class AppKeys
     {
-        private static readonly string[] StringValues = new[] {"LeftCtrl", "X", "A", "`", "Z", "1", "2", "C"};
+        private static string[] _stringValues;
+        private static Dictionary<string, Keys> _dictionary;
+
+        public static void Initialize()
+        {
+            _dictionary = new Dictionary<string, Keys>
+                                 {
+                                     {"LeftCtrl", Keys.LControlKey},
+                                     {"Z", Keys.Z},
+                                     {"X", Keys.X},
+                                     {"C", Keys.C},
+                                     {"A", Keys.A},
+                                     {"1", Keys.D1},
+                                     {"2", Keys.D2},
+                                     {"`", Keys.Oemtilde}
+                                 };
+            var tempList = new List<string>();
+            foreach (var element in _dictionary)
+            {
+                tempList.Add(element.Key);
+            }
+            _stringValues = tempList.ToArray();
+        }
 
         public static string[] GetStringValues()
         {
-            return StringValues;
+            return _stringValues;
         }
 
         public static int GetKeyPosition(Keys key)
         {
-            for (var i = 0; i < StringValues.Length; i++)
+            var position = 0;
+            foreach (var element in _dictionary)
             {
-                if (GetKeyFromStringValue(StringValues[i]) == key)
+                if(element.Value == key)
                 {
-                    return i;
+                    return position;
                 }
+                position++;
             }
-            return 0;
+            return position;
         }
 
         public static Keys GetKeyFromStringValue(string stringValue)
         {
-            switch (stringValue)
-            {
-                case "LeftCtrl": return Keys.LControlKey;
-                case "`": return Keys.Oemtilde;
-                case "X": return Keys.X;
-                case "A": return Keys.A;
-                case "Z": return Keys.Z;
-                case "1": return Keys.D1;
-                case "2": return Keys.D2;
-                case "C": return Keys.C;
-            }
-            return Keys.LControlKey;
+            return _dictionary[stringValue];
         }
     }
 }

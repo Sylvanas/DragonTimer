@@ -9,7 +9,6 @@ namespace DragonTimer
     public partial class MainWindow : Form
     {
         static readonly List<Keys> KeysPressed = new List<Keys> { Keys.Space, Keys.Space };
-        //private EventTrigger _dragonEvent;
         private readonly AlarmedEventTrigger _alarmedDragonEvent;
         private readonly AlarmedEventTrigger _testEvent;
         private readonly List<BaseEventTrigger> _appEvents = new List<BaseEventTrigger>();
@@ -19,10 +18,11 @@ namespace DragonTimer
         public MainWindow()
         {
             InitializeComponent();
+            AppKeys.Initialize();
             _alarmedDragonEvent = new AlarmedEventTrigger("Dragon", new List<Keys> { Keys.LControlKey, Keys.Oemtilde }, new List<Keys> { Keys.LControlKey, Keys.Z }, 19, new List<int> { 15, 10, 5 }, 30, true,
                  new List<bool> { true, true, true, true }, "Dragon", false, "Dragon is up", this);
-            _testEvent = new AlarmedEventTrigger("test", new List<Keys> { Keys.LControlKey, Keys.Oemtilde }, new List<Keys> { Keys.LControlKey, Keys.Z }, 19, new List<int> { 15, 10, 5 }, 30, true,
-                 new List<bool> { true, true, true, true }, "test", false, "test is up", this);
+            _testEvent = new AlarmedEventTrigger("test", new List<Keys> { Keys.LControlKey, Keys.X }, new List<Keys> { Keys.LControlKey, Keys.Z }, 19, new List<int> { 15, 10, 5 }, 30, true,
+                 new List<bool> { true, true, true }, "test", false, "test is up", this);
             _appEvents.Add(_alarmedDragonEvent);
             _appEvents.Add(_testEvent);
         }
@@ -42,29 +42,6 @@ namespace DragonTimer
             foreach (var currentEvent in _appEvents)
             {
                 currentEvent.CheckShortcuts(KeysPressed);
-            }
-        }
-
-        #region
-        private List<int> SetTaskValues()
-        {
-            try
-            {
-            }
-            catch
-            {
-                label8.Text = "Please set valid numbers for timer warnings";
-                return null;
-            }
-            return new List<int>();
-        }
-        #endregion
-
-        private void ActivatePressed(object sender, EventArgs e)
-        {
-            if (SetTaskValues() != null)
-            {
-                
             }
         }
 

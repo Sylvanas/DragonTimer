@@ -90,7 +90,7 @@ namespace DragonTimer
         {
             EventStartedTime = DateTime.Now;
             Timer.Start();
-            Timer.Interval = FirstInterval * 1000;
+            Timer.Interval = 1 * 1000;
             ElapsedSeconds = 0;
         }
 
