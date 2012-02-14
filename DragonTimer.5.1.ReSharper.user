@@ -16,17 +16,12 @@
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.Designer.cs" caret="0" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventTrigger.cs" caret="2375" fromTop="49" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AppKeys.cs" caret="0" fromTop="0" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5291" fromTop="7" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="2959" fromTop="0" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="1916" fromTop="30" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="385" fromTop="0" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:BaseEventTrigger.cs" caret="5291" fromTop="7" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="4766" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="3932" fromTop="24" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="3973" fromTop="24" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="4233" fromTop="32" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="384" fromTop="12" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="2609" fromTop="19" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="7705" fromTop="15" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="9842" fromTop="34" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="4363" fromTop="18" />
@@ -38,7 +33,7 @@
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="7071" fromTop="22" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="816" fromTop="11" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="71" fromTop="2" />
-      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="2829" fromTop="19" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="2886" fromTop="19" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="10909" fromTop="20" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="600" fromTop="14" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="10365" fromTop="21" />
@@ -52,6 +47,11 @@
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="11246" fromTop="20" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:EventGUIBuilder.cs" caret="11556" fromTop="20" />
       <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:MainWindow.cs" caret="1573" fromTop="23" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="6327" fromTop="12" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="5534" fromTop="7" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="5144" fromTop="12" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="6958" fromTop="32" />
+      <File id="F52AA97E-180A-40ED-8F2B-09080171D6C7/f:AlarmedEventTrigger.cs" caret="4766" fromTop="10" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

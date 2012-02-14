@@ -4,7 +4,7 @@ namespace DragonTimer
 {
     class AppKeys
     {
-        private static readonly string[] StringValues = new[] {"LeftCtrl", "X", "A", "`", "Z"};
+        private static readonly string[] StringValues = new[] {"LeftCtrl", "X", "A", "`", "Z", "1", "2", "C"};
 
         public static string[] GetStringValues()
         {
@@ -32,6 +32,9 @@ namespace DragonTimer
                 case "X": return Keys.X;
                 case "A": return Keys.A;
                 case "Z": return Keys.Z;
+                case "1": return Keys.D1;
+                case "2": return Keys.D2;
+                case "C": return Keys.C;
             }
             return Keys.LControlKey;
         }
