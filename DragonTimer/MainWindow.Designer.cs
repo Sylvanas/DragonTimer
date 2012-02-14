@@ -32,7 +32,6 @@ namespace DragonTimer
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -101,15 +100,6 @@ namespace DragonTimer
             this.label7.TabIndex = 13;
             this.label7.Text = "Finished warning";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(910, 328);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 23);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Save Configuration";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -134,7 +124,6 @@ namespace DragonTimer
             this.ClientSize = new System.Drawing.Size(1113, 363);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -162,7 +151,6 @@ namespace DragonTimer
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
 

@@ -59,7 +59,7 @@ namespace DragonTimer
         ///<param name="keyCombinationStart"></param>
         public void SetKeycombinationStart(List<Keys> keyCombinationStart)
         {
-            KeyCombinationStart = new List<Keys> { keyCombinationStart[0], keyCombinationStart[1] };
+            KeyCombinationStart = keyCombinationStart;
         }
 
         ///<summary>
@@ -67,7 +67,7 @@ namespace DragonTimer
         ///<param name="keyCombinationAction"></param>
         public void SetKeycombinationAction(List<Keys> keyCombinationAction)
         {
-            KeyCombinationAction = new List<Keys> { keyCombinationAction[0], keyCombinationAction[1] };
+            KeyCombinationAction = keyCombinationAction;
         }
 
         ///<summary>

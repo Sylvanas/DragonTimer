@@ -140,7 +140,7 @@ namespace DragonTimer
 
         private void ActionComboBoxSelectedIndexChanged(object sender, EventArgs e)
         {
-            _alarmedEventTrigger.SetKeycombinationStart(new List<Keys> { AppKeys.GetKeyFromStringValue(_firstShortcutActionKey.SelectedItem.ToString()), AppKeys.GetKeyFromStringValue(_secondShortcutActionKey.SelectedItem.ToString()) });
+            _alarmedEventTrigger.SetKeycombinationAction(new List<Keys> { AppKeys.GetKeyFromStringValue(_firstShortcutActionKey.SelectedItem.ToString()), AppKeys.GetKeyFromStringValue(_secondShortcutActionKey.SelectedItem.ToString()) });
         }
 
         private void AddFirstTimerCheckBox()
@@ -154,6 +154,8 @@ namespace DragonTimer
         private void AddFirstTimerTextBox()
         {
             _firstTimerTextBox = new TextBox { Location = new Point(_basePoint.X + _currentX, _basePoint.Y), Size = TimerTextBoxSize, TabIndex = _tabIndex++, Text = _intervalSecondsValues[0].ToString() };
+            _firstTimerTextBox.KeyPress += IgnoreTextBoxNonDigit;
+            _firstTimerTextBox.KeyUp += TimersChanged;
             _currentX += _firstTimerTextBox.Size.Width;
             _mainWindow.Controls.Add(_firstTimerTextBox);
         }
@@ -169,6 +171,8 @@ namespace DragonTimer
         private void AddSecondTimerTextBox()
         {
             _secondTimerTextBox = new TextBox { Location = new Point(_basePoint.X + _currentX, _basePoint.Y), Size = TimerTextBoxSize, TabIndex = _tabIndex++, Text = _intervalSecondsValues[1].ToString() };
+            _secondTimerTextBox.KeyPress += IgnoreTextBoxNonDigit;
+            _secondTimerTextBox.KeyUp += TimersChanged;
             _currentX += _secondTimerTextBox.Size.Width;
             _mainWindow.Controls.Add(_secondTimerTextBox);
         }
@@ -189,8 +193,30 @@ namespace DragonTimer
         private void AddThirdTimerTextBox()
         {
             _thirdTimerTextBox = new TextBox { Location = new Point(_basePoint.X + _currentX, _basePoint.Y), Size = TimerTextBoxSize, TabIndex = _tabIndex++, Text = _intervalSecondsValues[2].ToString() };
+            _thirdTimerTextBox.KeyPress += IgnoreTextBoxNonDigit;
+            _thirdTimerTextBox.KeyUp += TimersChanged;
             _currentX += _thirdTimerTextBox.Size.Width;
             _mainWindow.Controls.Add(_thirdTimerTextBox);
+        }
+
+        static void IgnoreTextBoxNonDigit(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case '\b':
+                    break;
+                default:
+                    if (!Char.IsDigit(e.KeyChar))
+                    {
+                        e.Handled = true;
+                    }
+                    break;
+            }
+        }
+
+        void TimersChanged(object sender, KeyEventArgs e)
+        {
+            _alarmedEventTrigger.SetAlarmTimers(new List<int> { int.Parse(_firstTimerTextBox.Text), int.Parse(_secondTimerTextBox.Text), int.Parse(_thirdTimerTextBox.Text) });
         }
 
         private void AddTimeOnlyCheck()

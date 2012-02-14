@@ -20,9 +20,9 @@ namespace DragonTimer
             InitializeComponent();
             AppKeys.Initialize();
             _alarmedDragonEvent = new AlarmedEventTrigger("Dragon", new List<Keys> { Keys.LControlKey, Keys.Oemtilde }, new List<Keys> { Keys.LControlKey, Keys.Z }, 19, new List<int> { 15, 10, 5 }, 30, true,
-                 new List<bool> { true, true, true, true }, "Dragon", false, "Dragon is up", this);
+                 new List<bool> { true, true, true, true }, "Dragon in ", false, "Dragon is up", this);
             _testEvent = new AlarmedEventTrigger("test", new List<Keys> { Keys.LControlKey, Keys.X }, new List<Keys> { Keys.LControlKey, Keys.Z }, 19, new List<int> { 15, 10, 5 }, 30, true,
-                 new List<bool> { true, true, true }, "test", false, "test is up", this);
+                 new List<bool> { true, true, true }, "test in ", false, "test is up", this);
             _appEvents.Add(_alarmedDragonEvent);
             _appEvents.Add(_testEvent);
         }

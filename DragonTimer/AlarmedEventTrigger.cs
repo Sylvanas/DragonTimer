@@ -11,7 +11,7 @@ namespace DragonTimer
     ///</summary>
     public class AlarmedEventTrigger : BaseEventTrigger
     {
-        private readonly List<int> _alarmTimers = new List<int>();
+        private List<int> _alarmTimers = new List<int>();
         private List<bool> _activateCurrentTimerTask = new List<bool>();
         private readonly string _stringBeforeSound;
         private bool _addStringBeforeActualSound;
@@ -27,19 +27,19 @@ namespace DragonTimer
         ///<param name="useOtherIntervalsValue"></param>
         ///<param name="activateCurrentTimerTaskValue"></param>
         ///<param name="stringBeforeSoundValue"></param>
-        ///<param name="addStringBeforeActualSoundValue"></param>
+        ///<param name="timeOnly"></param>
         ///<param name="finishedMessage"></param>
         ///<param name="mainWindow"></param>
         public AlarmedEventTrigger(string labelText, List<Keys> keyCombinationStart, List<Keys> keyCombinationAction,
             int respawnSecondsValue, List<int> alarmTimers, int otherIntervalsSecondsValue, bool useOtherIntervalsValue,
-            List<bool> activateCurrentTimerTaskValue, string stringBeforeSoundValue, bool addStringBeforeActualSoundValue, string finishedMessage, MainWindow mainWindow)
+            List<bool> activateCurrentTimerTaskValue, string stringBeforeSoundValue, bool timeOnly, string finishedMessage, MainWindow mainWindow)
             : base(keyCombinationStart, keyCombinationAction, respawnSecondsValue, alarmTimers[0], otherIntervalsSecondsValue, useOtherIntervalsValue, finishedMessage)
         {
             _activateCurrentTimerTask = activateCurrentTimerTaskValue;
             _alarmTimers = alarmTimers;
             _stringBeforeSound = stringBeforeSoundValue;
-            _addStringBeforeActualSound = addStringBeforeActualSoundValue;
-            new EventGuiBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, alarmTimers, activateCurrentTimerTaskValue, addStringBeforeActualSoundValue, finishedMessage);
+            _addStringBeforeActualSound = !timeOnly;
+            new EventGuiBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, alarmTimers, activateCurrentTimerTaskValue, timeOnly, finishedMessage);
         }
 
         ///<summary>
@@ -55,7 +55,7 @@ namespace DragonTimer
         ///<param name="value"></param>
         public void SetStringBeforeTimeWarning(bool value)
         {
-            _addStringBeforeActualSound = value;
+            _addStringBeforeActualSound = !value;
         }
 
         private void CheckForAlarmTimer()
@@ -113,6 +113,14 @@ namespace DragonTimer
         public void SetCurrentTimerTask(List<bool> newValues)
         {
             _activateCurrentTimerTask = newValues;
+        }
+
+        ///<summary>
+        ///</summary>
+        ///<param name="newValues"></param>
+        public void SetAlarmTimers(List<int> newValues)
+        {
+            _alarmTimers = newValues;
         }
 
         public bool ReadStringAmplified(string txtToRead, string wavDirectory, string finalDirectory)
