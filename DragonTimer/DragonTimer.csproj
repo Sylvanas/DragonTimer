@@ -113,9 +113,6 @@
     <Compile Include="AppKeys.cs" />
     <Compile Include="BaseEventTrigger.cs" />
     <Compile Include="EventGUIBuilder.cs" />
-    <Compile Include="GlobalEventProvider.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="HookManager.Callbacks.cs" />
     <Compile Include="HookManager.cs" />
     <Compile Include="HookManager.Structures.cs" />

@@ -72,7 +72,7 @@ namespace DragonTimer
                 _sKeyboardDelegate = null;
                 if (result == 0)
                 {
-                    int errorCode = Marshal.GetLastWin32Error();
+                    var errorCode = Marshal.GetLastWin32Error();
                     throw new Win32Exception(errorCode);
                 }
             }
