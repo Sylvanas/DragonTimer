@@ -16,8 +16,6 @@ namespace DragonTimer {
             }
             remove
             {
-                SKeyDown -= value;
-                TryUnsubscribeFromGlobalKeyboardEvents();
             }
         }
     }
