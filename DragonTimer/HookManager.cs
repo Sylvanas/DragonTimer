@@ -4,21 +4,6 @@ namespace DragonTimer {
 
     public static partial class HookManager
     {
-        private static event KeyPressEventHandler SKeyPress;
-
-        public static event KeyPressEventHandler KeyPress
-        {
-            add
-            {
-                EnsureSubscribedToGlobalKeyboardEvents();
-                SKeyPress += value;
-            }
-            remove
-            {
-                SKeyPress -= value;
-                TryUnsubscribeFromGlobalKeyboardEvents();
-            }
-        }
 
         private static event KeyEventHandler SKeyDown;
 

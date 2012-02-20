@@ -18,14 +18,11 @@ namespace DragonTimer
 
         private static int KeyboardHookProc(int nCode, Int32 wParam, IntPtr lParam)
         {
-            //indicates if any of underlaing events set e.Handled flag
             bool handled = false;
 
             if (nCode >= 0)
             {
-                //read structure KeyboardHookStruct at lParam
                 var myKeyboardHookStruct = (KeyboardHookStruct)Marshal.PtrToStructure(lParam, typeof(KeyboardHookStruct));
-                //raise KeyDown
                 if (SKeyDown != null && (wParam == WmKeydown || wParam == WmSyskeydown))
                 {
                     var keyData = (Keys)myKeyboardHookStruct.VirtualKeyCode;
@@ -33,29 +30,6 @@ namespace DragonTimer
                     SKeyDown.Invoke(null, e);
                     handled = e.Handled;
                 }
-
-                if (SKeyPress != null && wParam == WmKeydown)
-                {
-                    bool isDownShift = ((GetKeyState(VkShift) & 0x80) == 0x80 ? true : false);
-                    bool isDownCapslock = (GetKeyState(VkCapital) != 0 ? true : false);
-
-                    var keyState = new byte[256];
-                    GetKeyboardState(keyState);
-                    var inBuffer = new byte[2];
-                    if (ToAscii(myKeyboardHookStruct.VirtualKeyCode,
-                              myKeyboardHookStruct.ScanCode,
-                              keyState,
-                              inBuffer,
-                              myKeyboardHookStruct.Flags) == 1)
-                    {
-                        var key = (char)inBuffer[0];
-                        if ((isDownCapslock ^ isDownShift) && Char.IsLetter(key)) key = Char.ToUpper(key);
-                        var e = new KeyPressEventArgs(key);
-                        SKeyPress.Invoke(null, e);
-                        handled = handled || e.Handled;
-                    }
-                }
-
             }
             if (handled)
                 return -1;
@@ -83,8 +57,7 @@ namespace DragonTimer
 
         private static void TryUnsubscribeFromGlobalKeyboardEvents()
         {
-            if (SKeyDown == null &&
-                SKeyPress == null)
+            if (SKeyDown == null)
             {
                 ForceUnsunscribeFromGlobalKeyboardEvents();
             }

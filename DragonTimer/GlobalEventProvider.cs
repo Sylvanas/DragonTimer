@@ -13,36 +13,6 @@ namespace DragonTimer
             }
         }
 
-        private event KeyPressEventHandler MKeyPress;
-
-        public event KeyPressEventHandler KeyPress
-        {
-            add
-            {
-                if (MKeyPress==null)
-                {
-                    HookManager.KeyPress +=HookManagerKeyPress;
-                }
-                MKeyPress += value;
-            }
-            remove
-            {
-                MKeyPress -= value;
-                if (MKeyPress == null)
-                {
-                    HookManager.KeyPress -= HookManagerKeyPress;
-                }
-            }
-        }
-
-        void HookManagerKeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (MKeyPress != null)
-            {
-                MKeyPress.Invoke(this, e);
-            }
-        }
-
         private event KeyEventHandler MKeyDown;
 
         public event KeyEventHandler KeyDown
