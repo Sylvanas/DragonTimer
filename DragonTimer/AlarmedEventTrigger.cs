@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Media;
 using System.Windows.Forms;
-using SpeechLib;
 
 namespace DragonTimer
 {
@@ -14,7 +11,7 @@ namespace DragonTimer
         private List<int> _alarmTimers = new List<int>();
         private List<bool> _activateCurrentTimerTask = new List<bool>();
         private readonly string _stringBeforeSound;
-        private bool _addStringBeforeActualSound;
+        //private bool _addStringBeforeActualSound;
 
         ///<summary>
         ///</summary>
@@ -38,7 +35,7 @@ namespace DragonTimer
             _activateCurrentTimerTask = activateCurrentTimerTaskValue;
             _alarmTimers = alarmTimers;
             _stringBeforeSound = stringBeforeSoundValue;
-            _addStringBeforeActualSound = !timeOnly;
+            //_addStringBeforeActualSound = !timeOnly;
             new EventGuiBuilder(mainWindow, this, labelText, keyCombinationStart, keyCombinationAction, alarmTimers, activateCurrentTimerTaskValue, timeOnly, finishedMessage);
         }
 
@@ -55,7 +52,7 @@ namespace DragonTimer
         ///<param name="value"></param>
         public void SetStringBeforeTimeWarning(bool value)
         {
-            _addStringBeforeActualSound = !value;
+            //_addStringBeforeActualSound = !value;
         }
 
         private void CheckForAlarmTimer()
@@ -64,12 +61,12 @@ namespace DragonTimer
             {
                 if (_activateCurrentTimerTask[i] && (RespawnSeconds - ElapsedSeconds) == _alarmTimers[i])
                 {
-                    OnEventTime(_alarmTimers[i]);
+                    OnEventTime(_alarmTimers[i], true);
                 }
             }
         }
 
-        protected override void OnFirstTimedEvent()
+        protected override void OnTimedEvent()
         {
             Timer.Stop();
             ElapsedSeconds++;
@@ -86,11 +83,11 @@ namespace DragonTimer
             Timer.Start();
         }
 
-        protected override void OnEventTime(int dragonTimeSpan)
+        protected override void OnEventTime(int dragonTimeSpan, bool addString)
         {
             var minutesSeconds = GetMinutesAndSeconds(dragonTimeSpan);
             var stringBeforeSound = "";
-            if (_addStringBeforeActualSound)
+            if (addString)
             {
                 stringBeforeSound = _stringBeforeSound;
             }
@@ -123,57 +120,5 @@ namespace DragonTimer
             _alarmTimers = newValues;
         }
 
-        public bool ReadStringAmplified(string txtToRead, string wavDirectory, string finalDirectory)
-        {
-            string finalFileName = "myAmplifiedFile.WAV";
-            string tmpFileName = "tmpHoldingFile.WAV";
-            string soxEXE = @"C:\SOX\sox.exe";
-            string soxArgs = "-v 3.0 ";
-            SpVoice spVoice = new SpVoice();
-
-            spVoice.Volume = 100;
-            SpFileStream fileStream = new SpFileStream();
-            fileStream.Open(@tmpFileName, SpeechStreamFileMode.SSFMCreateForWrite, false);
-            spVoice.AudioOutputStream = fileStream;
-            spVoice.Speak(txtToRead, SpeechVoiceSpeakFlags.SVSFDefault);
-            fileStream.Close();
-            fileStream = null;
-
-            try
-            {
-                System.Diagnostics.Process process = new System.Diagnostics.Process();
-                process.StartInfo = new System.Diagnostics.ProcessStartInfo();
-                process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-                process.StartInfo.FileName = soxEXE;
-                process.StartInfo.Arguments = string.Format("{0} {1} {2}",
-                                         soxArgs, tmpFileName, finalFileName);
-                process.Start();
-                process.WaitForExit();
-                int exitCode = process.ExitCode;
-            }
-            catch (Exception ex)
-            {
-                string err = ex.Message;
-                return false;
-            }
-
-            try
-            {
-                SoundPlayer simpleSound = new SoundPlayer(@finalFileName);
-                simpleSound.PlaySync();
-                FileInfo readFile = new FileInfo(finalFileName);
-                string finalDestination = finalDirectory + "/" + readFile.Name;
-                readFile.MoveTo(finalDestination);
-            }
-            catch (Exception e)
-            {
-                string errmsg = e.Message;
-                return false;
-            }
-            finalFileName = "";
-            tmpFileName = "";
-            spVoice = null;
-            return true;
-        }
     }
 }

@@ -77,9 +77,9 @@ namespace DragonTimer
             AddThirdTimerCheckBox();
             _currentX += 10;
             AddThirdTimerTextBox();
-            _currentX += 70;
-            AddTimeOnlyCheck();
-            _currentX += 90;
+            _currentX += 50;
+            //AddTimeOnlyCheck();
+            //_currentX += 90;
             AddFinishedMessage();
         }
 

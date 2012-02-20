@@ -7,7 +7,7 @@
     <ProjectGuid>{F52AA97E-180A-40ED-8F2B-09080171D6C7}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>dragonTimer.ico</ApplicationIcon>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>DragonTimer</AssemblyName>
@@ -53,7 +53,8 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\Gma.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -95,10 +96,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.SpeechLib">
-      <HintPath>.\Interop.SpeechLib.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -114,9 +111,6 @@
   <ItemGroup>
     <Compile Include="AlarmedEventTrigger.cs" />
     <Compile Include="AppKeys.cs" />
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="BaseEventTrigger.cs" />
     <Compile Include="EventGUIBuilder.cs" />
     <Compile Include="GlobalEventProvider.cs">
@@ -126,7 +120,6 @@
     <Compile Include="HookManager.cs" />
     <Compile Include="HookManager.Structures.cs" />
     <Compile Include="HookManager.Windows.cs" />
-    <Compile Include="MouseEventExtArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -172,7 +165,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dragonTimer.ico" />
+    <Content Include="Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -120,13 +120,13 @@ namespace DragonTimer
             var dragonTimeSpan = Convert.ToDateTime(EventStartedTime).AddSeconds(RespawnSeconds) - DateTime.Now;
             if ((int)dragonTimeSpan.TotalSeconds > 1)
             {
-                OnEventTime((int)dragonTimeSpan.TotalSeconds);
+                OnEventTime((int)dragonTimeSpan.TotalSeconds, false);
             }
         }
 
         protected void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            OnFirstTimedEvent();
+            OnTimedEvent();
         }
 
         protected void OnNullEventStartedTime(bool voice)
@@ -138,8 +138,8 @@ namespace DragonTimer
             }
         }
 
-        protected virtual void OnFirstTimedEvent() { }
-        protected virtual void OnEventTime(int dragonTimeSpan) { }
+        protected virtual void OnTimedEvent() { }
+        protected virtual void OnEventTime(int dragonTimeSpan, bool addString) { }
 
         protected List<int> GetMinutesAndSeconds(int seconds)
         {
