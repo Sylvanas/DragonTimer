@@ -214,9 +214,34 @@ namespace DragonTimer
             }
         }
 
+        private static int GetIntValueFromTextBox(TextBox textBox)
+        {
+            if (textBox.Text.Length == 0)
+            {
+                return 0;
+            }
+            if (textBox.Text.Length == 1)
+            {
+                return int.Parse(textBox.Text);
+            }
+            var result = textBox.Text;
+            for (var i = 0; i < textBox.Text.Length - 1; i++)
+            {
+                if (result[0] == '0')
+                {
+                    result = result.Substring(1, result.Length - 1);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return int.Parse(result);
+        }
+
         void TimersChanged(object sender, KeyEventArgs e)
         {
-            _alarmedEventTrigger.SetAlarmTimers(new List<int> { int.Parse(_firstTimerTextBox.Text), int.Parse(_secondTimerTextBox.Text), int.Parse(_thirdTimerTextBox.Text) });
+            _alarmedEventTrigger.SetAlarmTimers(new List<int> { GetIntValueFromTextBox(_firstTimerTextBox), GetIntValueFromTextBox(_secondTimerTextBox), GetIntValueFromTextBox(_thirdTimerTextBox) });
         }
 
         private void AddTimeOnlyCheck()
